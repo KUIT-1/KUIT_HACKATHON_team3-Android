@@ -5,17 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.starbucks.databinding.FragmentRecommendFinishBinding
+import com.example.starbucks.databinding.FragmentOrderBinding
 
-class RecommendFinishFragment : Fragment() {
-    lateinit var binding: FragmentRecommendFinishBinding
+class OrderFragment : Fragment() {
+    lateinit var binding: FragmentOrderBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentRecommendFinishBinding.inflate(inflater, container, false)
+        binding = FragmentOrderBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

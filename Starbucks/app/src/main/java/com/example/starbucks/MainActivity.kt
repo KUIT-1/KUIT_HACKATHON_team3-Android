@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initBottomNavigation() {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.main_frm, WebtoonFragment())
+            .replace(R.id.main_frm, HomeFragment())
             .commitAllowingStateLoss()
 
 
@@ -25,32 +25,32 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.webtoonFragment -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, WebtoonFragment())
+                        .replace(R.id.main_frm, HomeFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
 
                 R.id.recommendFinishFragment -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, RecommendFinishFragment())
+                        .replace(R.id.main_frm, PayFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
                 R.id.bestChallengeFragment -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, BestChallengeFragment())
+                        .replace(R.id.main_frm, OrderFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
                 R.id.myFragment -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, MyFragment())
+                        .replace(R.id.main_frm, GiftFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
                 R.id.moreFragment -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_frm, MoreFragment())
+                        .replace(R.id.main_frm, OtherFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }

@@ -5,17 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.starbucks.databinding.FragmentWebtoonBinding
+import com.example.starbucks.databinding.FragmentOtherBinding
 
-class WebtoonFragment : Fragment() {
-    lateinit var binding: FragmentWebtoonBinding
+class OtherFragment : Fragment() {
+    lateinit var binding: FragmentOtherBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentWebtoonBinding.inflate(inflater, container, false)
+        binding = FragmentOtherBinding.inflate(inflater, container, false)
         return binding.root
     }
 }
