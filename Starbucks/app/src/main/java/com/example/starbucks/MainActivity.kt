@@ -2,6 +2,8 @@ package com.example.starbucks
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.starbucks.data.Bucket
+import com.example.starbucks.data.BucketDB
 import com.example.starbucks.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -11,6 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val bucketDB = BucketDB.getInstance(this)!!
+        initDummy((bucketDB))
 
         initBottomNavigation()
     }
@@ -59,5 +64,23 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.mainBnv.itemIconTintList = null
+    }
+
+
+    fun initDummy(bucketDB: BucketDB){
+        val bucketDao = bucketDB.BucketDao()
+        bucketDao.insert(
+            Bucket(
+                R.drawable.ic_launcher_background,
+                "라이트 키위 라임 브렌디드",
+                "Light Kiwi Lime Blended",
+                "ICED",
+                "Tall",
+                "매장컵",
+                1,
+                6300
+                )
+        )
+
     }
 }
