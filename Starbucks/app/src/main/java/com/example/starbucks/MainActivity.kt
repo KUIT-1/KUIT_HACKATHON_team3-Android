@@ -74,6 +74,9 @@ class MainActivity : AppCompatActivity() {
 
     fun initDummy(bucketDB: BucketDB){
         val bucketDao = bucketDB.BucketDao()
+        val test = bucketDao.getBucketList()
+        if(test.isEmpty() == false) return
+
         bucketDao.insert(
             Bucket(
                 R.drawable.ic_launcher_background,
