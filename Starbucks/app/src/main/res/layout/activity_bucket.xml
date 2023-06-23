@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:background="#2D2926">
 
+
         <ImageView
             android:id="@+id/bucket_btn_back_iv"
             android:layout_width="20dp"
@@ -19,6 +20,18 @@
             android:src="@drawable/bnv_arrow_back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/bucket_btn_delete_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/bnv_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
 
         <TextView
             android:id="@+id/bucket_head_tv"

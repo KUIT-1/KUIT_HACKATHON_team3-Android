@@ -14,6 +14,9 @@ interface BucketDao {
     @Delete
     fun delete(bucket: Bucket)
 
+    @Query("DELETE FROM BucketTable")
+    fun deleteAllData()
+
     @Query("SELECT * FROM BucketTable WHERE id = :idx")
     fun getBucket(idx : Int) : Bucket
 

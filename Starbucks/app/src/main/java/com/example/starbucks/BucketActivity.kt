@@ -11,6 +11,7 @@ import com.example.starbucks.data.BucketDB
 import com.example.starbucks.data.BucketDao
 import com.example.starbucks.databinding.ActivityBucketBinding
 import com.example.starbucks.databinding.ActivityMainBinding
+import com.example.starbucks.`interface`.BucketDeleteDialog
 
 class BucketActivity : AppCompatActivity() {
     var bucketAdapter: BucketAdapter? = null
@@ -32,6 +33,11 @@ class BucketActivity : AppCompatActivity() {
 
         binding.bucketBtnBackIv.setOnClickListener {
             finish()
+        }
+
+        binding.bucketBtnDeleteIv.setOnClickListener {
+            val bucketDeleteDialog = BucketDeleteDialog()
+            bucketDeleteDialog.show(supportFragmentManager, "bucketDeleteDialog")
         }
 
         bucketAdapter = BucketAdapter((bucketList))
