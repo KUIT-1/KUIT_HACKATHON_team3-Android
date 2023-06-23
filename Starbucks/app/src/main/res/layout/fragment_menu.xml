@@ -23,10 +23,12 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
         android:text="NEW"
         android:textColor="#000000"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:textStyle="bold"
+        android:paddingBottom="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_btn" />
     <!-- TabLayou 을 배치한다. -->
@@ -37,13 +39,12 @@
         app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/ll_store_selector"
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_menu"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/ll_store_selector"

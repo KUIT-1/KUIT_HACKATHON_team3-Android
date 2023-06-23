@@ -50,6 +50,16 @@ class OrderFragment : Fragment() {
             startActivity(mIntent)
         }
 
+        binding.cake.setOnClickListener{
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(com.example.starbucks.R.id.main_frm, MenuFragment())
+                ?.commit()
+        }
+        binding.reservation.setOnClickListener{
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(com.example.starbucks.R.id.main_frm, MenuFragment())
+                ?.commit()
+        }
         return binding.root
     }
 

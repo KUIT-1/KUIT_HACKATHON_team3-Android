@@ -17,7 +17,7 @@ class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     override fun createFragment(position: Int): Fragment {
         when (position) {
             0 -> return WholeMenuFragment()
-            1 -> return PayFragment()
+            1 -> return MyMenuFragment()
         }
         return WholeMenuFragment()
     }

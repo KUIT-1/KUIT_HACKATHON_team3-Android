@@ -2,13 +2,12 @@ package com.example.starbucks
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.starbucks.databinding.FragmentMenuBinding
-
 
 
 class MenuFragment : Fragment() {
@@ -23,6 +22,11 @@ class MenuFragment : Fragment() {
 
         val rv_menu = binding.rvMenu
         val itemList = ArrayList<Menu>()
+        itemList.add(Menu(0,"아이스 카페 아메리카노","Iced Caffe Americano", 4500))
+        itemList.add(Menu(0,"아이스 카페 아메리카노","Iced Caffe Americano", 4500))
+        itemList.add(Menu(0,"아이스 카페 아메리카노","Iced Caffe Americano", 4500))
+        itemList.add(Menu(0,"아이스 카페 아메리카노","Iced Caffe Americano", 4500))
+        itemList.add(Menu(0,"아이스 카페 아메리카노","Iced Caffe Americano", 4500))
         itemList.add(Menu(0,"아이스 카페 아메리카노","Iced Caffe Americano", 4500))
         itemList.add(Menu(0,"아이스 카페 아메리카노","Iced Caffe Americano", 4500))
         itemList.add(Menu(0,"아이스 카페 아메리카노","Iced Caffe Americano", 4500))
@@ -57,6 +61,8 @@ class MenuFragment : Fragment() {
 //            mIntent.putExtra("title","Sfdsf")
             startActivity(mIntent)
         }
+
+        
         return binding.root
     }
 }
