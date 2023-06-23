@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/drawable-v24/menu_btn.xml" value="0.1605" />
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/drawable/ic_home_background.xml" value="0.1605" />
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/drawable/ic_home_foreground.xml" value="0.1605" />
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/drawable/selector_best_challenge_icon.xml" value="0.1605" />
@@ -11,12 +12,23 @@
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/drawable/selector_recommend_finish_icon.xml" value="0.1605" />
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/drawable/selector_webtoon_icon.xml" value="0.1605" />
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/activity_menu_detail.xml" value="0.1671875" />
+        <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/activity_menu_search.xml" value="0.1671875" />
+        <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/confirm_btn.xml" value="0.1671875" />
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/fragment_best_challenge.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/fragment_gift.xml" value="0.1671875" />
+        <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/fragment_home.xml" value="0.1671875" />
+        <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/fragment_menu.xml" value="0.1671875" />
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/fragment_more.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/fragment_my.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/fragment_order.xml" value="0.1671875" />
+        <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/fragment_other.xml" value="0.1671875" />
+        <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/fragment_pay.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/fragment_recommend_finish.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/fragment_webtoon.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/fragment_whole_menu.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/menu_category_item.xml" value="0.1671875" />
+        <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/layout/menu_item.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/TaeHyun/AndroidStudioProjects/KUIT_HACKATHON_team3-Android/Starbucks/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25364583333333335" />
       </map>
     </option>
