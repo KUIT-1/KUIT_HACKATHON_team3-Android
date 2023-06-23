@@ -2,6 +2,9 @@ package com.example.starbucks
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.example.starbucks.data.Bucket
 import com.example.starbucks.data.BucketDB
 import com.example.starbucks.databinding.ActivityMainBinding
@@ -63,8 +66,10 @@ class MainActivity : AppCompatActivity() {
             false
         }
 
+
         binding.mainBnv.itemIconTintList = null
     }
+
 
 
     fun initDummy(bucketDB: BucketDB){
