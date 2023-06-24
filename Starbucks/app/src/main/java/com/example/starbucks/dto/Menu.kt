@@ -1,15 +1,16 @@
 package com.example.starbucks.dto
 
 import com.example.starbucks.Categories
+import com.example.starbucks.Menus
 import com.google.gson.annotations.SerializedName
 
 //ExampleResponse.kt
-data class MenuCategory(
+data class Menu(
     @SerializedName("id")
     val id: Int,
 
     @SerializedName("result")
-    val name: Array<Categories>,
+    val name: Array<Menus>,
 
     @SerializedName("description")
     val description: String
