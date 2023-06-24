@@ -1,7 +1,5 @@
 package com.example.starbucks
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -36,7 +34,6 @@ class WholeMenuFragment : Fragment() {
         itemList.add(MenuCategory(2,"리저브 에스프레소","Reserve Espresso"))
         itemList.add(MenuCategory(2,"리저브 에스프레소","Reserve Espresso"))
         itemList.add(MenuCategory(2,"리저브 에스프레소","Reserve Espresso"))
-
         val wholeMenuAdapter = WholeMenuAdapter(itemList)
         wholeMenuAdapter.notifyDataSetChanged()
 
@@ -52,25 +49,53 @@ class WholeMenuFragment : Fragment() {
             }
         }
 
-        val retrofit = Retrofit.Builder().baseUrl("https://naver.com/")
+        val retrofit = Retrofit.Builder().baseUrl("http://43.201.156.74:9000/")
+//        val retrofit = Retrofit.Builder().baseUrl("http://a8bf-118-131-90-139.ngrok-free.app/")
             .addConverterFactory(GsonConverterFactory.create()).build();
         val service = retrofit.create(RetrofitService::class.java);
-        service.getMenuCategory(1).enqueue(object : Callback<MenuCategoryDto> {
+        service.getMenuCategories().enqueue(object : Callback<MenuCategoryDto> {
             override fun onResponse(call: Call<MenuCategoryDto>, response: Response<MenuCategoryDto>) {
                 if(response.isSuccessful){
                     // 정상적으로 통신이 성고된 경우
                     var result: MenuCategoryDto? = response.body()
-                    Log.d("YMC", "onResponse 성공: " + result?.toString());
-                    Toast.makeText(context, "${response.body()}", Toast.LENGTH_SHORT).show()
+//                    itemList.clear()
+                    if (result != null) {
+                        for(category in result.name ){
+                            itemList.add(MenuCategory(category.id,category.name,category.description))
+                        }
+                    }
+                    val wholeMenuAdapter = WholeMenuAdapter(itemList)
+                    wholeMenuAdapter.notifyDataSetChanged()
+
+                    rv_menuCategory.adapter = wholeMenuAdapter
+                    rv_menuCategory.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+
+                    wholeMenuAdapter.itemClickListener = object : WholeMenuAdapter.OnItemClickListener {
+                        override fun onItemClick(position: Int) {
+                            val item = itemList[position]
+                            val bundle = Bundle()
+                            bundle.putString("id", item.id.toString())
+                            val menuFragment = MenuFragment() //프래그먼트2 선언
+                            menuFragment.arguments = bundle
+                            activity?.supportFragmentManager?.beginTransaction()
+                                ?.replace(R.id.main_frm, menuFragment)
+                                ?.commit()
+                        }
+                    }
+//                    itemList.add(MenuCategory(result.name,"리저브 에스프레소","Reserve Espresso"))
+                    Log.d("YMC", "onResponse 성공: " + response.body());
+//                    Toast.makeText(context, "${response.body()}", Toast.LENGTH_SHORT).show()
                 }else{
                     // 통신이 실패한 경우(응답코드 3xx, 4xx 등)
                     Log.d("YMC", "onResponse 실패")
+                    Toast.makeText(context, "엥", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<MenuCategoryDto>, t: Throwable) {
                 // 통신 실패 (인터넷 끊킴, 예외 발생 등 시스템적인 이유)
                 Log.d("YMC", "onFailure 에러: " + t.message.toString());
+                Toast.makeText(context, "엥", Toast.LENGTH_SHORT).show()
             }
         })
 

@@ -50,6 +50,10 @@ class OrderFragment : Fragment() {
             startActivity(mIntent)
         }
 
+        binding.ivBagBtn.setOnClickListener{
+            updateBucket(false)
+        }
+
         binding.cake.setOnClickListener{
             activity?.supportFragmentManager?.beginTransaction()
                 ?.replace(com.example.starbucks.R.id.main_frm, MenuFragment())
@@ -63,7 +67,15 @@ class OrderFragment : Fragment() {
         return binding.root
     }
 
-
+    fun updateBucket(state:Boolean){
+        if(state){
+            val intent = Intent(activity, EmptyBucketActivity::class.java)
+            startActivity(intent)
+        } else {
+            val intent = Intent(activity, BucketActivity::class.java)
+            startActivity(intent)
+        }
+    }
 
 
 }

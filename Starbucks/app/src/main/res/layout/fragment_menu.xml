@@ -49,17 +49,37 @@
     <LinearLayout
         android:id="@+id/ll_store_selector"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:background="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="4dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="주문할 매장을 선택해 주세요"
+            android:paddingLeft="12dp"
+            android:paddingRight="70dp"
             android:textColor="@color/white"
+            android:textSize="16sp"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            />
+        <ImageView
+            android:id="@+id/iv_down_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_down_foreground"
+            app:tint="@color/white"
+            />
+        <ImageView
+            android:id="@+id/iv_bag_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_bag_foreground"
+            app:tint="@color/white"
             />
     </LinearLayout>
 
